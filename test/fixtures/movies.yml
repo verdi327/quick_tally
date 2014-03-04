@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  critics_score: 1
+  positive_count: 1
+  neutral_count: 1
+  negative_count: 1
+  rating: MyString
+  runtime: 1
+  thumbnail_img: MyString
+  profile_img: MyString
+
+two:
+  title: MyString
+  description: MyText
+  critics_score: 1
+  positive_count: 1
+  neutral_count: 1
+  negative_count: 1
+  rating: MyString
+  runtime: 1
+  thumbnail_img: MyString
+  profile_img: MyString
