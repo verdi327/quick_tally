@@ -9,7 +9,7 @@
       <span class="label label-<%= determine_viewer_style(@movie) %>">Viewers: <%= @movie.viewer_consensus %></span>
     </div>
     <div class="vote-count">
-      Based on <%= @movie.total_votes %> votes
+      <%= @movie.total_votes %> user submitted votes
     </div>
     <div class="time-and-rating">
       <span><%= @movie.runtime %> min</span> |
@@ -32,5 +32,8 @@
 </div>
 
 <div class="form-action">
-  <%= link_to "Rate!", "#", class: "btn btn-primary btn-lg btn-block disabled", id: "submit-vote" %>
+  <%= form_tag movie_ratings_path(@movie), method: "post" do %>
+    <%= hidden_field_tag "rating", "", id: "viewer-vote" %>
+    <%= submit_tag "Rate!", class: "btn btn-primary btn-lg btn-block disabled", id: "submit-vote" %>
+  <% end %>
 </div>

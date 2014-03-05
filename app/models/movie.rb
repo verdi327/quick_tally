@@ -25,6 +25,14 @@ class Movie < ActiveRecord::Base
     viewer_results.sort_by {|opinion, count| -count }.flatten.first
   end
 
+  def add_rating(rating)
+    case rating
+    when SEE_AT_THEATER then update_attribute :positive_count, (positive_count + 1)
+    when SEE_AT_HOME then update_attribute :neutral_count, (neutral_count + 1)
+    when DONT_SEE then update_attribute :negative_count, (negative_count + 1)
+    end
+  end
+
   private
 
   def viewer_results

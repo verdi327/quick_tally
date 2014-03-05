@@ -4424,7 +4424,7 @@ a.thumbnail.active {
   color: #222222;
 }
 .alert {
-  padding: 15px;
+  padding: 9px;
   margin-bottom: 21px;
   border: 1px solid transparent;
   border-radius: 0;
@@ -5934,7 +5934,7 @@ label,
   font-weight: 300;
 }
 .alert {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
 }
 .alert a,

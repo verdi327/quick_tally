@@ -13,6 +13,7 @@ $(document).ready ->
     else
       $(this).addClass("btn-success selected")
       $("#submit-vote").removeClass("disabled")
+      $("#viewer-vote").val("See At Theater")
     false
 
   $("#neutral").on "click", ->
@@ -24,6 +25,7 @@ $(document).ready ->
     else
       $(this).addClass("btn-warning selected")
       $("#submit-vote").removeClass("disabled")
+      $("#viewer-vote").val("See At Home")
     false
 
   $("#negative").on "click", ->
@@ -35,4 +37,5 @@ $(document).ready ->
     else
       $(this).addClass("btn-danger selected")
       $("#submit-vote").removeClass("disabled")
+      $("#viewer-vote").val("Don't See")
     false
