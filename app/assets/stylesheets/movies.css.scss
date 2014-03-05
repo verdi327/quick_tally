@@ -1,0 +1,36 @@
+.movie{
+  &:hover{cursor:pointer; background:#dddddd}
+  &.well {border-left:1px solid #f04124; border-right:1px solid #f04124; border-bottom:1px solid #f04124; border-top:7px solid #f04124}
+  .movie-img {float:left; margin-top:5px}
+  .top-level-info {float:left; margin-top:-25px; margin-left:15px}
+  .total-votes {
+    float:right;
+    padding:3px 12px;
+    border-bottom-left-radius:14px;
+    margin-top:-19px;
+    margin-right:-20px;
+    background-color:#008cba;
+    color:#fff;
+    font-size:12px
+  }
+  h3 {font-size:23px; margin-top:27px; margin-bottom:14px}
+  .label {padding: 4px 12px; font-size:12px}
+  .critics {margin-bottom:10px}
+}
+
+.movie-details{
+  margin-top:25px;
+  .movie-img {min-width:135px; float:left}
+  .facts{
+    min-width:300px;
+    .vote-count {margin-bottom:5px; margin-top:16px}
+    .label {padding: 4px 12px; font-size:12px}
+    .viewers,
+    .critics {margin-bottom:10px}
+  }
+}
+
+.synopsis {margin-top:15px}
+.add-rating h3 {font-weight:400}
+.form-action {margin-top:20px}
+

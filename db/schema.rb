@@ -17,13 +17,14 @@ ActiveRecord::Schema.define(version: 20140303214432) do
     t.string   "title"
     t.text     "description"
     t.integer  "critics_score"
-    t.integer  "positive_count"
-    t.integer  "neutral_count"
-    t.integer  "negative_count"
+    t.integer  "positive_count", default: 0
+    t.integer  "neutral_count",  default: 0
+    t.integer  "negative_count", default: 0
     t.string   "rating"
     t.integer  "runtime"
     t.string   "thumbnail_img"
     t.string   "profile_img"
+    t.boolean  "in_theaters",    default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
