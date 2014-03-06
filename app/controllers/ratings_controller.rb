@@ -4,7 +4,7 @@ class RatingsController < ApplicationController
   def create
     movie = Movie.find_by_id(params[:movie_id])
     if movie.add_rating(rating)
-      flash[:success] = "Added '#{rating}' rating to #{movie.title}"
+      flash[:success] = "Woot! #{movie.title} rated"
       redirect_to movies_path
     else
       flash[:error] = "Curses! Try again"
