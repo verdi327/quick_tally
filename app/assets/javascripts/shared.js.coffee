@@ -7,6 +7,10 @@ $(document).ready ->
     if /filter_movies/.test(url)
       $("#nav-theater").removeClass("active")
       $("#nav-search").addClass("active")
+    else if /movies/.test(url)
+      $("#nav-search").removeClass("active")
+    else
+      $("#nav-theater").removeClass("active")
 
   setActiveNavLink()
 

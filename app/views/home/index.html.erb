@@ -1,0 +1,22 @@
+<% cache(cache_key_for_movies) do %>
+
+  <h2>Movie Reviews Simplified</h2>
+
+  <ul class="well perks">
+    <li><i class="fa fa-dot-circle-o"></i>Easily See All In Theater Movies</li>
+    <li><i class="fa fa-dot-circle-o"></i>Add Your Review in 2 Clicks</li>
+    <li><i class="fa fa-dot-circle-o"></i>No Signup Needed</li>
+    <li><i class="fa fa-dot-circle-o"></i>Critic Reviews From Rotten Tomatoes</li>
+    <li><i class="fa fa-dot-circle-o"></i>Actionable User Reviews</li>
+    <ul class="reviews">
+      <li>See In Theaters</li>
+      <li>Wait For NetFlix</li>
+      <li>Don't Waste Your Time</li>
+    </ul>
+  </ul>
+
+  <%= render @movies %>
+
+  <%= link_to "Check Out Currently Playing Movies", movies_path, class: "btn btn-primary btn-block" %>
+
+<% end %>

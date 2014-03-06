@@ -1,13 +1,13 @@
 QuickTally::Application.routes.draw do
-  resources :movies do
-    resources :ratings
+  resources :movies, only: [:index, :show] do
+    resources :ratings, only: [:create]
   end
   resources :filter_movies, only: [:index, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

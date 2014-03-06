@@ -20,4 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  positive: "See In Theaters"
+  neutral: "Wait For NetFlix"
+  negative: "Don't Waste Your Time"
