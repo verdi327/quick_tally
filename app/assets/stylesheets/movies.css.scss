@@ -2,7 +2,7 @@
   &:hover{cursor:pointer; background:#dddddd}
   &.well {border-left:1px solid #f04124; border-right:1px solid #f04124; border-bottom:1px solid #f04124; border-top:7px solid #f04124}
   .movie-img {float:left; margin-top:5px}
-  .top-level-info {float:left; margin-top:-25px; margin-left:15px}
+  .top-level-info {float:left; margin-top:-25px; margin-left:10px}
   .total-votes {
     float:right;
     padding:3px 12px;
@@ -19,7 +19,8 @@
 }
 
 .movie-details{
-  margin-top:25px;
+  h3 {margin-top:7px; font-size:24px}
+  margin-top:0px;
   .movie-img {min-width:135px; float:left}
   .facts{
     min-width:300px;
