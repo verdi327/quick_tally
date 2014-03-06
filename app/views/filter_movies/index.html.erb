@@ -1,0 +1,7 @@
+<h3>Search New and Old Movies</h3>
+
+<div class="search-form">
+  <%= form_tag filter_movies_path, method: "post" do %>
+    <%= text_field_tag :query, "", autofocus: true %>
+  <% end %>
+</div>

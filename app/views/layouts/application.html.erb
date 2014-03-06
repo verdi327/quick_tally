@@ -3,11 +3,29 @@
 <head>
   <title>QuickTally</title>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <div class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Reel Reviews</a>
+    </div>
+    <div class="navbar-collapse navbar-inverse-collapse collapse in" style="height: auto;">
+      <ul class="nav navbar-nav">
+        <li class="active" id="nav-theater"><%= link_to "In Theaters", movies_path, class: "navbar-link" %></li>
+        <li id="nav-search"><%= link_to "Search", filter_movies_path, class: "navbar-link" %></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="container">
     <% flash.each do |name, msg| %>
       <% css_class = name == :error ? "danger" : "success" %>

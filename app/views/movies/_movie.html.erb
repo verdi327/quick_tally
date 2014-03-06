@@ -1,0 +1,19 @@
+<div class="movie well" data-id="<%= movie.id %>">
+  <div class="total-votes"><%= movie.total_votes %> votes</div>
+  <div style="clear:both"></div>
+  <div class="movie-img"><%= image_tag movie.thumbnail_img %></div>
+  <div class="top-level-info">
+    <h3><%= truncate(movie.title, length: 23) %></h3>
+    <div class="critics">
+      <span class="label label-<%= determine_critic_style(movie) %>">Critics: <%= movie.critics_score %>%</span>
+    </div>
+    <div class="viewers">
+      <% if movie.insufficient_votes? %>
+        <span class="label label-default">Need <%= movie.votes_until_live %> more votes</span>
+      <% else %>
+        <span class="label label-<%= determine_viewer_style(movie) %>">Viewers: <%= movie.viewer_consensus %></span>
+      <% end %>
+    </div>
+  </div>
+  <div style="clear:both"></div>
+</div>

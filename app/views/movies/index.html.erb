@@ -1,20 +1,3 @@
 <h1>In Theater Movies</h1>
 
-<% @movies.each do |movie| %>
-  <div class="movie well" data-id="<%= movie.id %>">
-    <div class="total-votes"><%= movie.total_votes %> votes</div>
-    <div style="clear:both"></div>
-    <div class="movie-img"><%= image_tag movie.thumbnail_img %></div>
-    <div class="top-level-info">
-      <h3><%= truncate(movie.title, length: 23) %></h3>
-      <div class="critics">
-        <span class="label label-<%= determine_critic_style(movie) %>">Critics: <%= movie.critics_score %>%</span>
-      </div>
-      <div class="viewers">
-        <span class="label label-<%= determine_viewer_style(movie) %>">Viewers: <%= movie.viewer_consensus %></span>
-      </div>
-    </div>
-    <div style="clear:both"></div>
-  </div>
-<% end %>
-
+<%= render @movies %>

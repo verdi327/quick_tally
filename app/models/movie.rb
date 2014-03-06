@@ -33,9 +33,21 @@ class Movie < ActiveRecord::Base
     end
   end
 
+  def insufficient_votes?
+    total_votes < vote_threshold
+  end
+
+  def votes_until_live
+    vote_threshold - total_votes
+  end
+
   private
 
   def viewer_results
     {SEE_AT_THEATER => positive_count, SEE_AT_HOME => neutral_count, DONT_SEE => negative_count}
+  end
+
+  def vote_threshold
+    10
   end
 end
