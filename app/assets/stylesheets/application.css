@@ -13,4 +13,6 @@
  */
 
  .alert {margin-top:20px}
- .alert .close {margin-top:-2px;}
+ .alert .close {margin-top:-2px}
+
+ .page-title {margin-top:0px;}
