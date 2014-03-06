@@ -1,9 +1,17 @@
-<h3>Search New and Old Movies</h3>
+<h3 class="search-title">Search New and Old Movies</h3>
 
 <div class="search-form">
+  <p>try searching by...</p>
+  <ol>
+    <li><b>Title:</b> Anchorman</li>
+    <li><b>Actor:</b> Will Ferrell</li>
+    <li><b>Character Names:</b> Ron Burgundy</li>
+    <li><b>Keywords:</b> News</li>
+  </ol>
+
   <%= form_tag filter_movies_path, method: "post" do %>
-    <%= text_field_tag :query, "", autofocus: true %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= text_field_tag :query, "", autofocus: true, class: "form-control" %>
+    <%= submit_tag "Search", class: "btn btn-primary btn-block" %>
   <% end %>
 </div>
 

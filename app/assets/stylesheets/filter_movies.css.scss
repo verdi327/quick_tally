@@ -1,6 +1,9 @@
+.search-title {margin-top:0px}
+
 .search-form{
+  ol {padding-left:11px; list-style:none}
+  p {margin-top:-15px; margin-bottom:0px}
   margin-top:25px;
   margin-bottom:25px;
-  input#query {width:250px; font-size:14px}
-  .btn {margin-left:10px}
+  input#query {width:100%; font-size:14px; margin-bottom:15px}
 }
