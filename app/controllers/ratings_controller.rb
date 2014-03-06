@@ -7,7 +7,7 @@ class RatingsController < ApplicationController
       flash[:success] = "Added '#{rating}' rating to #{movie.title}"
       redirect_to movies_path
     else
-      flash[:error] = "Curses! Something went wrong while recording your vote. Try again"
+      flash[:error] = "Curses! Something went wrong. Try again"
       redirect_to movie_path(movie)
     end
   end
