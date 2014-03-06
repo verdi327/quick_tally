@@ -3,7 +3,6 @@ development:
   encoding: unicode
   database: quick_tally_development
   pool: 5
-  username: michaelverdi
   password:
 
 test:
@@ -11,5 +10,4 @@ test:
   encoding: unicode
   database: quick_tally_test
   pool: 5
-  username: michaelverdi
   password:
