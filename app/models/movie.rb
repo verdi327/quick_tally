@@ -3,6 +3,13 @@ class Movie < ActiveRecord::Base
   SEE_AT_HOME    = "See At Home"
   DONT_SEE       = "Don't See"
 
+  include PgSearch
+
+  pg_search_scope :search_full_text, :against => {
+    :title => 'A',
+    :description => 'B'
+  }
+
   scope :in_theaters, -> {where(in_theaters: true).order(critics_score: :desc)}
 
   def self.mark_all_as_out_of_theater

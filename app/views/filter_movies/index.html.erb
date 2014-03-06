@@ -3,5 +3,12 @@
 <div class="search-form">
   <%= form_tag filter_movies_path, method: "post" do %>
     <%= text_field_tag :query, "", autofocus: true %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 </div>
+
+<% if @movies && @movies.empty? %>
+  <h4>No Results Found</h4>
+<% elsif @movies %>
+    <%= render @movies %>
+<% end %>
