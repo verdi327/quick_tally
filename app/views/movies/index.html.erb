@@ -1,3 +1,4 @@
-<h2 class="page-title">In Theater Movies</h2>
-
-<%= render @movies %>
+<% cache(cache_key_for_movies) do %>
+  <h2 class="page-title">In Theater Movies</h2>
+  <%= render @movies %>
+<% end %>

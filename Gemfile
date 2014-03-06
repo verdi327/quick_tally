@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem "faraday"
 gem 'rails_12factor', group: :production
+gem "dalli"
+gem "memcachier"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
