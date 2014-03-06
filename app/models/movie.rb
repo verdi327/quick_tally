@@ -1,7 +1,7 @@
 class Movie < ActiveRecord::Base
   SEE_AT_THEATER = "See At Theater"
-  SEE_AT_HOME    = "See At Home"
-  DONT_SEE       = "Don't See"
+  SEE_AT_HOME    = "Wait For NetFlix"
+  DONT_SEE       = "Don't Waste Your Time"
 
   include PgSearch
 
