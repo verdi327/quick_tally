@@ -1,6 +1,6 @@
 <% cache(cache_key_for_movies) do %>
 
-  <h2>Movie Reviews Simplified</h2>
+  <h2 class="page-title">Movie Reviews Simplified</h2>
 
   <ul class="well perks">
     <li><i class="fa fa-dot-circle-o"></i>Easily See All In Theater Movies</li>
@@ -15,6 +15,7 @@
     </ul>
   </ul>
 
+  <p>sample review...</p>
   <%= render @movies %>
 
   <%= link_to "Check Out Currently Playing Movies", movies_path, class: "btn btn-primary btn-block" %>
