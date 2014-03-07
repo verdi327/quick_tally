@@ -1,28 +1,23 @@
-== README
+== ReelReviews.io
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Movie Reviews Simplified
 
-Things you may want to cover:
+* No Signin Required
 
-* Ruby version
+* 2 click reviews
 
-* System dependencies
+* Actionable Reviews: either See In Theater, Wait for Netflix, or Don't Waste Your Time
 
-* Configuration
+* Critic Reviews From Rotten Tomatoes
 
-* Database creation
+Tech Stuff
 
-* Database initialization
+* Running Ruby 2.0.0-p247
 
-* How to run the test suite
+* Rails 4 with Postrgres
 
-* Services (job queues, cache servers, search engines, etc.)
+* To Access Rotten Tomatoes Api - Sign up for apikey first
 
-* Deployment instructions
+* `export ROTTEN_TOMATOES_KEY='your_key_here'`
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* To Populate Your DB: `rake fetch_new_movies`
