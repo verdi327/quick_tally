@@ -16,8 +16,8 @@ Tech Stuff
 
 * Rails 4 with Postrgres
 
-* To Access Rotten Tomatoes Api - Sign up for apikey first
+To Access Rotten Tomatoes Api - Sign up for apikey first
 
-* `export ROTTEN_TOMATOES_KEY='your_key_here'`
+`export ROTTEN_TOMATOES_KEY='your_key_here'`
 
-* To Populate Your DB: `rake fetch_new_movies`
+To Populate Your DB: `rake fetch_new_movies`
