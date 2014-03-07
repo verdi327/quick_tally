@@ -3,12 +3,18 @@ class RatingsController < ApplicationController
 
   def create
     movie = Movie.find_by_id(params[:movie_id])
-    if movie.add_rating(rating)
-      flash[:success] = "Woot! #{movie.title} rated"
+    if session[movie.id]
+      flash[:error] = "Halt! You've already rated #{movie.title}"
       redirect_to movies_path
     else
-      flash[:error] = "Curses! Try again"
-      redirect_to movie_path(movie)
+      if movie.add_rating(rating)
+        session[movie.id] = "rated"
+        flash[:success] = "Woot! #{movie.title} rated"
+        redirect_to movies_path
+      else
+        flash[:error] = "Curses! Try again"
+        redirect_to movie_path(movie)
+      end
     end
   end
 
